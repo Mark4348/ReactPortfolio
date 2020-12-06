@@ -1,8 +1,13 @@
 import React from "react";
+import Hero from "../Components/Hero"
+
 
 function Homepage(props) {
     return (
-        <p>Home Page works</p>
+        <Hero title={props.title}
+            subtitle={props.subtitle}
+            text={props.text}
+        />
     );    
 
 }
