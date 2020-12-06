@@ -50,22 +50,23 @@ class App extends React.Component {
 
           <Navbar className="border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand>Mark Aguilar</Navbar.Brand>
+            
             <Navbar.Toggle className="border" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" to="/Homepage">Home</Link>
-                <Link className="nav-link" to="/Aboutpage">About</Link>
-                <Link className="nav-link" to="/Contactpage">Contact</Link>
+                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/about">About</Link>
+                <Link className="nav-link" to="/contact">Contact</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
 
-          <Route path="/Homepage" exact render={() => <Homepage title={this.state.home.title} 
+          <Route path="/" exact render={() => <Homepage title={this.state.home.title} 
           subtitle={this.state.home.subtitle} text={this.state.home.text} />} />
 
-          <Route path="/Aboutpage" exact render={() => <Aboutpage title={this.state.about.title} />} />
+          <Route path="/about" exact render={() => <Aboutpage title={this.state.about.title} />} />
 
-          <Route path="/Contactpage" exact render={() => <Contactpage title={this.state.contact.title} />} />
+          <Route path="/contact" exact render={() => <Contactpage title={this.state.contact.title} />} />
 
           <Footer />
 
