@@ -31,7 +31,7 @@ class App extends React.Component {
         text: "Check out my projects below"
       },
       about: {
-        title: "A journey of perpetual learning"
+        title: "About Me"
       },
       contact: {
         title: "Connect With Me!"
@@ -50,7 +50,7 @@ class App extends React.Component {
 
           <Navbar className="border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand>Mark Aguilar</Navbar.Brand>
-            
+
             <Navbar.Toggle className="border" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
