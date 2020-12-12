@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
+import Axios from "axios";
 import Hero from "../Components/Hero";
 import Content from "../Components/Content"
 
@@ -34,8 +34,31 @@ class Contactpage extends React.Component {
         //handling request limit to one 
         this.setState({
             disabled: true,
-            emailSent: true
+            
         });
+
+        Axios.post("http://localhost:3030/api/email", this.State)
+            .then(res => {
+                if(res.data.success) {
+                this.setState({
+                    disabled: false,
+                    emailSent: true
+                });
+            } else {
+                    this.setState({
+                        disabled: false,
+                        emailSent: false
+                    });
+                }
+            })
+            .catch(err => {
+                this.setState({
+                    disabled:false,
+                    emailSent: false
+                });
+            })
+
+
     }
 
 
